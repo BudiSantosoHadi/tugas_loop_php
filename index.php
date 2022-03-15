@@ -311,8 +311,6 @@
 
          </tbody>
           
-        </table>
-        <br>
         <table border= "1" cellpadding="8">
           <thead class="hd_pg">
           <th colspan="10">Logic 1.5</th>
@@ -463,10 +461,295 @@
          </tbody>
           
         </table>
-    </div>
+        <br>
+        <table border="1" cellpadding="9" cellspacing="0">
+        <thead class="hd_pg">
+          <th colspan="10">Logic 2_1</th>
+          </thead>  
+         
+            <?php
+          echo "<td class='none-box'></td>";
+          echo "<td class='num'> 1 </td>";
+          echo "<td class='num'> 2 </td>";
+          echo "<td class='num'> 3 </td>";
+          echo "<td class='num'> 4 </td>";
+          echo "<td class='num'> 5 </td>";
+          echo "<td class='num'> 6 </td>";
+          echo "<td class='num'> 7 </td>";
+          echo "<td class='num'> 8 </td>";
+          echo "<td class='num'> 9 </td>";
+          for ( $i=1; $i <=9; $i++ ) {
+           echo "<tr>";
+           echo "<td class='num'>$i</td>";
+          for ( $j=1; $j <= 9; $j++) {
+
+          if ( $j==$i) {
+        
+         echo "<td> * </td>";
+          }
+         else{
+         echo "<td> - </td>";
+          
+          }
+
+       }
+       
+     }
+     
+    
+   ?>
+     <!-- 2,2 -->
+<table border="1" cellpadding="9" cellspacing="0">
+<thead class="hd_pg">
+<th colspan="10">Logic 2_2</th>
+</thead>  
+<?php
+          echo "<td class='none-box'></td>";
+          echo "<td class='num'> 1 </td>";
+          echo "<td class='num'> 2 </td>";
+          echo "<td class='num'> 3 </td>";
+          echo "<td class='num'> 4 </td>";
+          echo "<td class='num'> 5 </td>";
+          echo "<td class='num'> 6 </td>";
+          echo "<td class='num'> 7 </td>";
+          echo "<td class='num'> 8 </td>";
+          echo "<td class='num'> 9 </td>";
+ for ( $i=1; $i <=9; $i++ ) {
+     echo "<tr>";
+     echo "<td class='num'>$i</td>";
+     for ( $j=1; $j <= 9; $j++) {
+
+         if ( 9 - $i - -1 == $j) {
+            echo "<td> * </td>";
+        }
+        else{
+            echo "<td> - </td>";
+          }
+
+     }
+ }
+?>
+</table>
+
+<!-- 2,3 -->
+<table border="1" cellpadding="9" cellspacing="0">
+<thead class="hd_pg">
+<th colspan="10">Logic 2_3</th>
+</thead>  
+<?php
+            echo "<td class='none-box'></td>";
+            echo "<td class='num'> 1 </td>";
+            echo "<td class='num'> 2 </td>";
+            echo "<td class='num'> 3 </td>";
+            echo "<td class='num'> 4 </td>";
+            echo "<td class='num'> 5 </td>";
+            echo "<td class='num'> 6 </td>";
+            echo "<td class='num'> 7 </td>";
+            echo "<td class='num'> 8 </td>";
+            echo "<td class='num'> 9 </td>";
+ for ( $i=1; $i <=9; $i++ ) {
+     echo "<tr>";
+     echo "<td class='num'>$i</td>";
+     for ( $j=1; $j <= 9; $j++) {
+
+         if ( $j==$i) {
+            echo "<td> * </td>";
+        }
+        elseif ( 9 - $i - -1 == $j) {
+            echo "<td> * </td>";
+        }
+        else{
+            echo "<td> - </td>";
+          }
+
+     }
+ }
+?>
+</table>
+</div>
+
+
+<!-- 2,4 -->
+<table border="1" cellpadding="9" cellspacing="0">
+<thead class="hd_pg">
+<th colspan="10">Logic 2_4</th>
+</thead>  
+    <?php
+           echo "<td class='none-box'></td>";
+           echo "<td class='num'> 1 </td>";
+           echo "<td class='num'> 2 </td>";
+           echo "<td class='num'> 3 </td>";
+           echo "<td class='num'> 4 </td>";
+           echo "<td class='num'> 5 </td>";
+           echo "<td class='num'> 6 </td>";
+           echo "<td class='num'> 7 </td>";
+           echo "<td class='num'> 8 </td>";
+           echo "<td class='num'> 9 </td>";
+ for ( $i=1; $i <=9; $i++ ) {
+     echo "<tr>";
+     echo "<td class='num'>$i</td>";
+     for ( $j=1; $j <= 9; $j++) {
+
+         if ( $j<=$i) {
+            echo "<td> * </td>";
+        }
+        else{
+            echo "<td> - </td>";
+          }
+
+     }
+ }
+?>
+</table>
+
+
+<!-- 2,5 -->
+<table border="1" cellpadding="9" cellspacing="0">
+<thead class="hd_pg">
+<th colspan="10">Logic 2_5</th>
+</thead>  
+<?php
+          echo "<td class='none-box'></td>";
+          echo "<td class='num'> 1 </td>";
+          echo "<td class='num'> 2 </td>";
+          echo "<td class='num'> 3 </td>";
+          echo "<td class='num'> 4 </td>";
+          echo "<td class='num'> 5 </td>";
+          echo "<td class='num'> 6 </td>";
+          echo "<td class='num'> 7 </td>";
+          echo "<td class='num'> 8 </td>";
+          echo "<td class='num'> 9 </td>";
+ for ( $i=1; $i <=9; $i++ ) {
+     echo "<tr>";
+     echo "<td class='num'>$i</td>";
+     for ( $j=1; $j <= 9; $j++) {
+
+         if ( $i > 9 - $j ) {
+            echo "<td> * </td>";
+        }
+        else{
+            echo "<td> - </td>";
+          }
+
+     }
+ }
+?>
+</table>
+
+
+<!-- 2,6 -->
+<table border="1" cellpadding="9" cellspacing="0">
+<thead class="hd_pg">
+<th colspan="10">Logic 2_6</th>
+</thead>  
+<?php
+          echo "<td class='none-box'></td>";
+          echo "<td class='num'> 1 </td>";
+          echo "<td class='num'> 2 </td>";
+          echo "<td class='num'> 3 </td>";
+          echo "<td class='num'> 4 </td>";
+          echo "<td class='num'> 5 </td>";
+          echo "<td class='num'> 6 </td>";
+          echo "<td class='num'> 7 </td>";
+          echo "<td class='num'> 8 </td>";
+          echo "<td class='num'> 9 </td>";
+for ( $i=1; $i <=9; $i++) {
+    echo "<tr>";
+    echo "<td class='num'>$i</td>";
+    for ( $j=1; $j <= 9; $j++) {
+
+        if ( $j>=$i + 1) {
+           echo "<td> - </td>";
+       }
+       elseif ( $i < 9 - $j + 1 ) {
+        echo "<td> - </td>";
+    }
+       else{
+           echo "<td> * </td>";
+         }
+
+    }
+}
+?>
+
+<table border="1" cellpadding="9" cellspacing="0">
+        <thead class="hd_pg">
+          <th colspan="10">Logic 3_1</th>
+          </thead>  
+         
+            <?php
+          echo "<td class='none-box'></td>";
+          echo "<td class='num'> 1 </td>";
+          echo "<td class='num'> 2 </td>";
+          echo "<td class='num'> 3 </td>";
+          echo "<td class='num'> 4 </td>";
+          echo "<td class='num'> 5 </td>";
+          echo "<td class='num'> 6 </td>";
+          echo "<td class='num'> 7 </td>";
+          echo "<td class='num'> 8 </td>";
+          echo "<td class='num'> 9 </td>";
+          for ( $i=1; $i <= 9; $i++ ) {
+           echo "<tr>";
+           echo "<td class='num'>$i</td>";
+          for ( $j=1; $j <= 9; $j++) {
+
+          if ( $j == $i) {
+            $f = 2 % 9 + 2;
+            echo "<td>" . $j %  $f . "</td>";
+          }
+         else{
+         echo "<td> - </td>";
+          
+          }
+
+       }
+       
+     }
+     
+    
+   ?>
+  <br>
+<!-- -============================================================================== -->
+    <?php
+      function logic2_2(){
+
+        $result0 = "*";
+        $result = "-";
+
+        for ($j=0; $j < 9; $j++) { 
+         if ($j == 1){
+          echo "<td rowspan='1'>$result0</td>"; 
+         }else {
+          echo "<td rowspan='1'>$result</td>"; 
+         }
+        }
+      }
+
+    ?>
+      <?php
+      function logic2_3(){
+
+        $result0 = "*";
+        $result = "-";
+
+        for ($j=0; $j < 9; $j++) { 
+         if ($j == 2){
+          echo "<td rowspan='1'>$result0</td>"; 
+         }else {
+          echo "<td rowspan='1'>$result</td>"; 
+         }
+        }
+      }
+
+    ?>
+
+  
+      
+</table>
         
     <?php
     function logic_1(){
+      
       $result = "*";
 
       for ($i=0; $i < 9; $i++) { 
@@ -559,10 +842,14 @@
           echo "<td rowspan='1'>$result_1</td>";
         }
         
+
        
         
       }
     
     ?>
+     
 </body>
+
+
 </html>
