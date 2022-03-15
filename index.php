@@ -672,7 +672,7 @@ for ( $i=1; $i <=9; $i++) {
 }
 ?>
 
-<table border="1" cellpadding="9" cellspacing="0">
+<table border="1" cellpadding="7" cellspacing="0">
         <thead class="hd_pg">
           <th colspan="10">Logic 3_1</th>
           </thead>  
@@ -694,8 +694,7 @@ for ( $i=1; $i <=9; $i++) {
           for ( $j=1; $j <= 9; $j++) {
 
           if ( $j == $i) {
-            $f = 2 % 9 + 2;
-            echo "<td>" . $j %  $f . "</td>";
+            echo "<td>" . (($j * 2) - 1) . "</td>";
           }
          else{
          echo "<td> - </td>";
