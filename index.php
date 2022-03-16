@@ -759,7 +759,7 @@ for ( $i=1; $i <=9; $i++) {
      echo "<td class='num'>$i</td>";
      for ( $j=1; $j <= 9; $j++) {
 
-         if ( $j==$i) {
+        if ( $j==$i) {
             echo "<td>" . (($j * 2) - 1)   .  "</td>";
         }
         elseif ( 9 - $i - -1 == $j) {
@@ -857,7 +857,51 @@ for ( $i=1; $i <=9; $i++) {
     
    ?>
    </table>
-
+   <table border="1" cellpadding="6" cellspacing="1">
+    <thead class="hd_pg">
+    <th colspan="10">Logic 3_6</th>
+      </thead>  
+        <?php
+            echo "<td class='none-box'></td>";
+            echo "<td class='num'> 1 </td>";
+            echo "<td class='num'> 2 </td>";
+            echo "<td class='num'> 3 </td>";
+            echo "<td class='num'> 4 </td>";
+            echo "<td class='num'> 5 </td>";
+            echo "<td class='num'> 6 </td>";
+            echo "<td class='num'> 7 </td>";
+            echo "<td class='num'> 8 </td>";
+            echo "<td class='num'> 9 </td>";
+            
+            for ( $i=1; $i <=9; $i++ ) {
+              echo "<tr>";
+              echo "<td class='num'>$i</td>";
+              for ( $j=1; $j <= 9; $j++) {
+         
+                 if ( $j==$i) {
+                     echo "<td>" . (($j * 2) - 1)   .  "</td>";
+                 }
+                 elseif ( 9 - $i - -1 == $j) {
+                     echo "<td>" . (($j * 2) - 2)   . "</td>";
+                 }
+                 elseif (($i <= 5 && $j < $i ) || ($i > 5 && $j < (10 - $i)) ){
+                    echo "<td>A</td>";
+                  }
+                  elseif (($i <= 5 && 10 < ($i + $j) || $i > 5 && $i < $j)) {
+                    echo "<td>B</td>";
+                  }
+                  else{
+                     echo "<td> - </td>";
+                   }
+         
+              }
+              
+          }
+            
+       
+              
+         ?>
+    </table>
 <!-- -============================================================================== -->
     <?php
       function logic2_2(){
@@ -999,6 +1043,4 @@ for ( $i=1; $i <=9; $i++) {
     ?>
      
 </body>
-
-
 </html>
