@@ -466,7 +466,6 @@
         <thead class="hd_pg">
           <th colspan="10">Logic 2_1</th>
           </thead>  
-         
             <?php
           echo "<td class='none-box'></td>";
           echo "<td class='num'> 1 </td>";
@@ -519,7 +518,7 @@
      echo "<td class='num'>$i</td>";
      for ( $j=1; $j <= 9; $j++) {
 
-         if ( 9 - $i - -1 == $j) {
+         if ($i+$j == 10) {
             echo "<td> * </td>";
         }
         else{
@@ -527,6 +526,7 @@
           }
 
      }
+  
  }
 ?>
 </table>
@@ -552,12 +552,10 @@
      echo "<td class='num'>$i</td>";
      for ( $j=1; $j <= 9; $j++) {
 
-         if ( $j==$i) {
+         if ( $j==$i || $i+$j == 10) {
             echo "<td> * </td>";
         }
-        elseif ( 9 - $i - -1 == $j) {
-            echo "<td> * </td>";
-        }
+      
         else{
             echo "<td> - </td>";
           }
@@ -585,12 +583,12 @@
            echo "<td class='num'> 7 </td>";
            echo "<td class='num'> 8 </td>";
            echo "<td class='num'> 9 </td>";
- for ( $i=1; $i <=9; $i++ ) {
+   for ( $i=1; $i <=9; $i++ ) {
      echo "<tr>";
      echo "<td class='num'>$i</td>";
      for ( $j=1; $j <= 9; $j++) {
 
-         if ( $j<=$i) {
+         if ($i >= $j) {
             echo "<td> * </td>";
         }
         else{
@@ -624,7 +622,7 @@
      echo "<td class='num'>$i</td>";
      for ( $j=1; $j <= 9; $j++) {
 
-         if ( $i > 9 - $j ) {
+         if ( $i+$j >= 10) {
             echo "<td> * </td>";
         }
         else{
@@ -653,7 +651,7 @@
           echo "<td class='num'> 7 </td>";
           echo "<td class='num'> 8 </td>";
           echo "<td class='num'> 9 </td>";
-for ( $i=1; $i <=9; $i++) {
+    for ( $i=1; $i <=9; $i++) {
     echo "<tr>";
     echo "<td class='num'>$i</td>";
     for ( $j=1; $j <= 9; $j++) {
@@ -728,7 +726,7 @@ for ( $i=1; $i <=9; $i++) {
      echo "<td class='num'>$i</td>";
      for ( $j=1; $j <= 9; $j++) {
 
-         if ( 9 - $i - -1 == $j) {
+         if ($i+$j == 10) {
             echo "<td>". (($j * 2) - 2) . "</td>";
         }
         else{
@@ -754,15 +752,15 @@ for ( $i=1; $i <=9; $i++) {
             echo "<td class='num'> 7 </td>";
             echo "<td class='num'> 8 </td>";
             echo "<td class='num'> 9 </td>";
- for ( $i=1; $i <=9; $i++ ) {
+     for ( $i=1; $i <=9; $i++ ) {
      echo "<tr>";
      echo "<td class='num'>$i</td>";
      for ( $j=1; $j <= 9; $j++) {
 
-        if ( $j==$i) {
+        if ( $j == $i) {
             echo "<td>" . (($j * 2) - 1)   .  "</td>";
         }
-        elseif ( 9 - $i - -1 == $j) {
+        elseif ($i+$j == 10) {
             echo "<td>" . (($j * 2) - 2)   . "</td>";
         }
         else{
@@ -878,18 +876,24 @@ for ( $i=1; $i <=9; $i++) {
               echo "<td class='num'>$i</td>";
               for ( $j=1; $j <= 9; $j++) {
          
-                 if ( $j==$i) {
+                 if ($i == $j) { 
                      echo "<td>" . (($j * 2) - 1)   .  "</td>";
                  }
-                 elseif ( 9 - $i - -1 == $j) {
+                 elseif ($i+$j == 10) {
                      echo "<td>" . (($j * 2) - 2)   . "</td>";
                  }
-                 elseif (($i <= 5 && $j < $i ) || ($i > 5 && $j < (10 - $i)) ){
-                    echo "<td>A</td>";
-                  }
-                  elseif (($i <= 5 && 10 < ($i + $j) || $i > 5 && $i < $j)) {
-                    echo "<td>B</td>";
-                  }
+                 elseif ($i>$j && $i+$j < 10) {
+                  echo "<td>A</td>";
+                 }
+                 elseif ($i<$j && $i+$j > 10) {
+                  echo "<td>B</td>";
+                 }
+                  //  elseif (($i <= 5 && $j < $i ) || ($i > 5 && $j < (10 - $i)) ){
+                  //   echo "<td>A</td>";
+                  // }
+                  // elseif (($i <= 5 && 10 < ($i + $j) || $i > 5 && $i < $j)) {
+                  //   echo "<td>B</td>";
+                  // }
                   else{
                      echo "<td> - </td>";
                    }
